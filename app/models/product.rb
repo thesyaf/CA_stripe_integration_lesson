@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
-  has_one :cart
 
   include ImageUploader[:image]
 
+  has_many :order_items
+
+  default_scope { where(active: true) }
 end
