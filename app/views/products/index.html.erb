@@ -17,6 +17,9 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.image_data %></td>
+        <td><%= image_tag product.image_url %></td>
+
+
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.price %></td>

@@ -1,3 +1,6 @@
 class Product < ApplicationRecord
-  belongs_to :cart
+  has_one :cart
+
+  include ImageUploader[:image]
+
 end
