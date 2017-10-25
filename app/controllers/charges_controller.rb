@@ -15,7 +15,7 @@ class ChargesController < ApplicationController
     if current_user.stripe_id?
 
       charge = Stripe::Charge.create(
-        :customer    => user.stripe_id,
+        :customer    => current_user.stripe_id,
         :amount      => @amount,
         :description => 'Rails Stripe customer',
         :currency    => 'usd'
